@@ -1,3 +1,11 @@
+---
+title: "Java泛型"
+date: 2020-03-05 00:00
+tags:
+	- Java
+	- Java Generics
+---
+
 
 
 ### Java泛型 类型擦除

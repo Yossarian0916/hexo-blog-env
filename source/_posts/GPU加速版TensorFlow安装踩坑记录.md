@@ -1,3 +1,13 @@
+---
+title: "tensorflow-gpu installation"
+date: 2019-10-05 00:00
+banner: ./images/tf_logo_social.png
+tags:
+	- tensorflow
+---
+
+
+
 ## GPU加速版TensorFlow安装踩坑记录
 
 System information:

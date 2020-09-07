@@ -1,3 +1,12 @@
+---
+title: "Java IO"
+date: 2020-04-01 00:00
+tags:
+	- Java
+---
+
+
+
 # Java I/O
 
 I/O流 概念： 流数据从一端传到另一端
