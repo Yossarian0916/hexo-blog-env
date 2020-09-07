@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 乱笔,留下一奈奈记录
+title: 乱笔
 subtitle: ''
 description: 'personal notes, keep track of learning tech'
 keywords:
@@ -41,7 +41,10 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
+marked:
+    prependRoot: true
+    postAsset: true
 relative_link: false
 future: true
 highlight:
@@ -98,7 +101,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: ayer
+theme: vexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
