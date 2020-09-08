@@ -42,9 +42,7 @@ tags:
 
 
 
-## References:
-
-[Linux内核设计与实现（第三版）]
-
-[用户空间与内核空间，进程上下文与中断上下文]：(<https://www.cnblogs.com/Anker/p/3269106.html>)
+# References:
+Linux内核设计与实现（第三版）
+[用户空间与内核空间，进程上下文与中断上下文](<https://www.cnblogs.com/Anker/p/3269106.html>)
 

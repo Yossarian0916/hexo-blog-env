@@ -155,14 +155,12 @@ client.connect(('127.0.0.1', 9999))
      - I/O多路复用 (select, poll)
      - 信号驱动I/O (SIGIO)
      - 异步I/O
-   
-7. 
 
     
 
    
 
-Reference：
+# Reference：
 
 [1] [Linux的SOCKET编程详解](<https://www.cnblogs.com/jiangzhaowei/p/8261174.html>)
 
@@ -172,4 +170,5 @@ Reference：
 
 [4] [Python中的Socket编程](<https://keelii.gitbooks.io/socket-programming-in-python-cn/content/>)
 
-[5] [Linux IO模式及select, poll, epoll详解](<https://segmentfault.com/a/1190000003063859#articleHeader6>)
+[5] [Linux IO模式及select, poll, epoll详解](https://segmentfault.com/a/1190000003063859#articleHeader6)
+
