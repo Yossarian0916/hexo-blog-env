@@ -4,6 +4,7 @@ date: 2020-07-15 00:00:00
 tags:
   - Algorithm
   - LeetCode
+mathjax: true
 ---
 
 
@@ -14,7 +15,7 @@ Josephus problem (or Josephus permutation), 简单说，N个人围成一圈，�
 
 > People are standing in a circle waiting to be executed. Counting begins at a specified point in the circle and proceeds around the circle in a specified direction. After a specified number of people are skipped, the next person is executed. The procedure is repeated with the remaining people, starting with the next person, going in the same direction and skipping the same number of people, until only one person remains, and is freed. 
 >
-> ​		-- from Wikipedia
+>                                                                -- from Wikipedia
 
 ## 解法1: circular linked list
 
@@ -44,23 +45,24 @@ public Node createCirLinkedList(int N) {
 }
 
 public int solve(int N, int m) {
-     // create circurlar linked list
+     /* create circurlar linked list */
      Node head = createCirLinkedList(N);
-     // remove node recursively 
+     /* remove node recursively */ 
      while (head != head.next){
-         // move head point to the previous node before to-be-deleted node
-         // head.next is the node to be deleted
+         /* move head point to the previous node before to-be-deleted node */
+         /* head.next is the node to be deleted */
          for (int i = 1; i < m - 1; i++){
              head = head.next;
          }
          System.out.print(head.next.data+"->");
-         // remove the m-th node
+         /* remove the m-th node */
          head.next = head.next.next;
          head = head.next;
          }
          System.out.print("Done!\n");
          return head.data;
 }
+
 ```
 
 
@@ -73,43 +75,41 @@ $J(n)$表示n个人玩最后胜利者的编号（编号从0开始），按照这
 
 过程：
 
-$ J(n) $:
+$J(n)$:
 
-​	编号$ m \% ( n-1 ) $出局，剩下的人组成一个新的环，从$ k = m \% n $开始
+   编号m % ( n - 1 )出局，剩下的人组成一个新的环，从k = m % n开始
 
-​	0, 1, 2, 3, 4, ..., k-2, ~~k-1,~~ k, k+1, k+2, k+3, k+4, ..., n-1
+   0, 1, 2, 3, 4, ..., k-2, ~~k-1,~~ k, k+1, k+2, k+3, k+4, ..., n-1
 
-$ J(n-1) $:
+$J(n-1)$:
 
-​	n-k, n-k+1, n-k+2,..., n-2,   0, 1, 2, 3, 4, ..., n-k-1,
+   n-k, n-k+1, n-k+2,..., n-2,   0, 1, 2, 3, 4, ..., n-k-1,
 
-​	编号做一下转换：
+   编号做一下转换：
 
-​		 J(n)编号 --> J(n-1)编号
-
-​				k --> 0
-
-​			  k+1 --> 1
-
-​              k+2 --> 2
-
-​			      ...
-
-​			  k-2 --> n-2
-
-​			  k-1 --> ~~n-1~~
+            J(n)编号 --> J(n-1)编号
+    
+                   k --> 0
+    
+                 k+1 --> 1
+    
+                 k+2 --> 2
+    
+                     ...
+    
+                 k-2 --> n-2
+    
+                 k-1 --> n-1
 
 n个人玩J(n)时的序号转换成n-1个人玩J(n-1)的序号，这样之，当我们知道子问题J(n-1）的胜利者编号就可以转换成J(n)时的编号，J(1)->J(2)->...->J(n-1)->J(n), 递推公式就来了
-$$
-\\J(n) = (J(n-1) + k) \% n
-\\k = m \% n
-\\=> J(n) = (J(n-1) + m \% n) \% n = (J(n-1) + m) \% n
-$$
+```
+   J(n) = (J(n-1) + k) % n, k = m % n
+=> J(n) = (J(n-1) + m % n) % n
+        = (J(n-1) + m) % n
+```
 
 递推公式:
-
 J(1) = 0
-
 J(n) = (J(n-1) + m) % n
 
 
@@ -125,11 +125,10 @@ public int solve(int N, int m) {
      return (recursiveSolve(N - 1, m) + m) % N;
 }
 
-// when index begins at 1
+/* when index begins at 1 */
 int res = solve(N, m) + 1;
+
 ```
-
-
 
 #### iterative:
 
@@ -140,10 +139,11 @@ public int solve(int N, int m) {
      for (int i = 2; i <= N; i++){
          res = (res + m) % i;
      }
-     // when index begin at 1
+     /* when index begin at 1 */
      res = res + 1;
      return res;
 }
+
 ```
 
 
