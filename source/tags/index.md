@@ -1,4 +1,5 @@
 ---
 title: Tags
-layout: tags
+data: {{date}}
+type: "tags"
 ---
