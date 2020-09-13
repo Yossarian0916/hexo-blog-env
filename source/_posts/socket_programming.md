@@ -35,61 +35,60 @@ tags:
 
 3. 客户端/服务器socket通信简单例子
 
-   ```python3
+```python3
 #!/usr/bin/env python3
-   # 客户端
+# 客户端
 import socket
-   
 
-   # create socket descriptor
+# create socket descriptor
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-   # connect with local loopback address
+# connect with local loopback address
 client.connect(('127.0.0.1', 9999))
+
+# receive message from server, and send message from console input
+# close the socket until input 'exit'
+while True:
+    data = client.recv(1024)
+    print(data.decode('utf-8'))
+    
+    msg = input('>>> ')
+    client.send(msg.encode('utf-8'))
+    if msg == 'exit':
+        break
+client.close()
+```
    
-   # receive message from server, and send message from console input
-   # close the socket until input 'exit'
-   while True:
-   	data = client.recv(1024)
-   	print(data.decode('utf-8'))
-   	
-   	msg = input('>>> ')
-   	client.send(msg.encode('utf-8'))
-   	if msg == 'exit':
-   		break
-   client.close()
-   ```
-   
-   ```python3
-   #!/usr/bin/env python3
-   # 服务器端
-   import socket
-   import time
-   import random
-   
-   
-   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-   s.bind(('127.0.0.1', 9999))
-   s.listen(5)  # backlog number
-   print('Waiting for connection...')
-   
-   # accept connection from client
-   # receive message from client and send a random integer back 
-   # until receive 'exit', close the connection and wait for next one
-   while True:
-   	conn, addr = s.accept()
-   	conn.send(b'Welcome')
-   	print('Connected with %s:%s' % addr)
-   	while True:
-   		data = conn.recv(1024)
-   		time.sleep(1)  # simple way to unpack block
-   		if not data or data.encode('utf-8') == 'exit':
-   			break
-   		else:
-   			msg = random.randint(1, 100)
-   			conn.send(str(msg).encode('utf-8'))
-   	conn.close()
-   	print('Connection from %s:%s closed\n' % addr)
-   ```
+```python3
+#!/usr/bin/env python3
+# 服务器端
+import socket
+import time
+import random
+
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(('127.0.0.1', 9999))
+s.listen(5)  # backlog number
+print('Waiting for connection...')
+
+# accept connection from client
+# receive message from client and send a random integer back 
+# until receive 'exit', close the connection and wait for next one
+while True:
+    conn, addr = s.accept()
+    conn.send(b'Welcome')
+    print('Connected with %s:%s' % addr)
+    while True:
+            data = conn.recv(1024)
+            time.sleep(1)  # simple way to unpack block
+            if not data or data.encode('utf-8') == 'exit':
+                    break
+            else:
+                    msg = random.randint(1, 100)
+                    conn.send(str(msg).encode('utf-8'))
+    conn.close()
+    print('Connection from %s:%s closed\n' % addr)
+```
    
    
    
