@@ -100,6 +100,12 @@ math:
       tex:
       svg:
 
+# Search
+search:
+    path: search.json
+    field: post
+    content: true
+
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
@@ -109,7 +115,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: vexo
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -117,4 +123,11 @@ deploy:
   type: git
   repo: git@github.com:Yossarian0916/yossarian0916.github.io.git
   branch: master
+
+# Emoji
+emoji:
+  enable: true
+  className: github-emoji
+  styles:
+  customEmojies:
 

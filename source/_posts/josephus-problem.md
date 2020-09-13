@@ -9,11 +9,12 @@ mathjax: true
 
 
 # Josephus Problem
-## 问题描述:
+
+## 问题描述
 
 Josephus problem (or Josephus permutation), 简单说，N个人围成一圈，从某一人（比如第k个）开始报数，报到m的人退出，如此循环，直到最后一个人
 
-> People are standing in a circle waiting to be executed. Counting begins at a specified point in the circle and proceeds around the circle in a specified direction. After a specified number of people are skipped, the next person is executed. The procedure is repeated with the remaining people, starting with the next person, going in the same direction and skipping the same number of people, until only one person remains, and is freed. 
+> People are standing in a circle waiting to be executed. Counting begins at a specified point in the circle and proceeds around the circle in a specified direction. After a specified number of people are skipped, the next person is executed. The procedure is repeated with the remaining people, starting with the next person, going in the same direction and skipping the same number of people, until only one person remains, and is freed.
 >
 >                                                                -- from Wikipedia
 
@@ -62,10 +63,7 @@ public int solve(int N, int m) {
          System.out.print("Done!\n");
          return head.data;
 }
-
 ```
-
-
 
 ## 解法2: 数学方法递推公式
 
@@ -102,6 +100,7 @@ $J(n-1)$:
                  k-1 --> n-1
 
 n个人玩J(n)时的序号转换成n-1个人玩J(n-1)的序号，这样之，当我们知道子问题J(n-1）的胜利者编号就可以转换成J(n)时的编号，J(1)->J(2)->...->J(n-1)->J(n), 递推公式就来了
+
 ```
    J(n) = (J(n-1) + k) % n, k = m % n
 => J(n) = (J(n-1) + m % n) % n
@@ -112,9 +111,7 @@ n个人玩J(n)时的序号转换成n-1个人玩J(n-1)的序号，这样之，当
 J(1) = 0
 J(n) = (J(n-1) + m) % n
 
-
-
-#### recursive:
+### recursive
 
 ```java
 public int solve(int N, int m) {
@@ -127,10 +124,9 @@ public int solve(int N, int m) {
 
 /* when index begins at 1 */
 int res = solve(N, m) + 1;
-
 ```
 
-#### iterative:
+### iterative
 
 ```java
 public int solve(int N, int m) {
@@ -143,14 +139,9 @@ public int solve(int N, int m) {
      res = res + 1;
      return res;
 }
-
 ```
 
-
-
-
-
-## Reference:
+## Reference
 
 [Josephus problem wikipedia](https://en.wikipedia.org/wiki/Josephus_problem)
 
