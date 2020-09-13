@@ -35,8 +35,7 @@ tags:
 
 3. 客户端/服务器socket通信简单例子
 
-```python3
-#!/usr/bin/env python3
+```python
 # 客户端
 import socket
 
@@ -57,9 +56,8 @@ while True:
         break
 client.close()
 ```
-   
-```python3
-#!/usr/bin/env python3
+
+```python
 # 服务器端
 import socket
 import time
@@ -89,9 +87,9 @@ while True:
     conn.close()
     print('Connection from %s:%s closed\n' % addr)
 ```
+
    
-   
-   
+
 4. Python socket编程
 
    a. 创建socket描述符

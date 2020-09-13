@@ -70,7 +70,7 @@ System information:
 
 4. 最后的最后，检查TensorFlow是否能使用GPU加速
 
-   ```python3
+   ```python
    from tensorflow.python.client import device_lib
    import tensorflow as tf
    
