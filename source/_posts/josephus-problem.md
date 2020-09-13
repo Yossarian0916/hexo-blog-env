@@ -15,8 +15,6 @@ mathjax: true
 Josephus problem (or Josephus permutation), 简单说，N个人围成一圈，从某一人（比如第k个）开始报数，报到m的人退出，如此循环，直到最后一个人
 
 > People are standing in a circle waiting to be executed. Counting begins at a specified point in the circle and proceeds around the circle in a specified direction. After a specified number of people are skipped, the next person is executed. The procedure is repeated with the remaining people, starting with the next person, going in the same direction and skipping the same number of people, until only one person remains, and is freed.
->
->                                                                -- from Wikipedia
 
 ## 解法1: circular linked list
 
