@@ -1,9 +1,9 @@
 ---
 title: RMQ-ST-table
+date: 2020-11-19 04:03:26
 tags:
   - algorithms
   - dynamic programming
-date: 2020-11-19 04:03:26
 ---
 
 
