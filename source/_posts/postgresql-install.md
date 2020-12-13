@@ -1,8 +1,8 @@
 ---
 title: Install PostgreSQL 12
+date: 2020-11-20
 tags:
   - postgresql
-date: 2020-12-13 10:07:13
 ---
 
 
