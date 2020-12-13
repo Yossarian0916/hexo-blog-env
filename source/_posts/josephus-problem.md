@@ -2,8 +2,7 @@
 title: Josephus Problem
 date: 2020-07-15 00:00:00
 tags:
-  - Algorithm
-  - LeetCode
+  - algorithms
 mathjax: true
 ---
 

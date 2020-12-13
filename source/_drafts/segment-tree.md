@@ -30,11 +30,14 @@ tags:
 
 ## Reference
 
-[Segment Tree, CP-Algorithms](https://cp-algorithms.com/data_structures/segment_tree.html)
-
 [线段树详解](https://www.cnblogs.com/xenny/p/9801703.html)
-
-[浅谈线段树](https://www.wmathor.com/index.php/archives/1175/)
 
 [夜深人静写算法（七）- 线段树](https://blog.csdn.net/whereisherofrom/article/details/78969718)
 
+[浅谈线段树（Segment Tree）](https://wmathor.com/index.php/archives/1175/)
+
+[线段树详解（原理，实现与应用）](https://blog.csdn.net/zearot/article/details/48299459#t26)
+
+[线段树总结-java版](https://blog.csdn.net/xushiyu1996818/article/details/90293988)
+
+[Segment Tree, CP-Algorithms](https://cp-algorithms.com/data_structures/segment_tree.html)
