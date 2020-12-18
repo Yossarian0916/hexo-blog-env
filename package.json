@@ -9,11 +9,11 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "5.1.1"
+    "version": "5.3.0"
   },
   "dependencies": {
     "@1v9/hexo-next-nightmode": "git+https://github.com/1v9/hexo-next-nightmode.git",
-    "hexo": "^5.0.0",
+    "hexo": "^5.3.0",
     "hexo-cake-moon-menu": "^2.3.3",
     "hexo-deployer-git": "^2.1.0",
     "hexo-filter-emoji": "^2.2.1",
