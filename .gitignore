@@ -1,7 +1,15 @@
+# hexo db
 .DS_Store
 Thumbs.db
 db.json
+
+# hexo generated files
 *.log
-node_modules/
 public/
 .deploy*/
+
+# npm packages
+node_modules/
+package-lock.json
+package.json
+yarn.lock
