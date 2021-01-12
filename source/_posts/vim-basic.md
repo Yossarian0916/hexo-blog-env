@@ -1,9 +1,11 @@
 ---
 title: Vim basic
-data: 2020-12-12 12:23
 tags:
-    - vim
+  - vim
+data: '2021-01-02 12:23'
+date: 2021-01-12 22:53:40
 ---
+
 
 1. vim系统剪切板
 "+y 复制到系统clipboard
