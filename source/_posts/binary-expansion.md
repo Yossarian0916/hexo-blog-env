@@ -1,8 +1,8 @@
 ---
-title: binary-expansion
+title: Binary Expansion
+date: 2020-12-14 00:41:03
 tags:
   - algorithms
-date: 2020-12-14 00:41:03
 ---
 
 

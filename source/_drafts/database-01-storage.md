@@ -1,6 +1,6 @@
 ---
 title: database-01-storage
-data: 2020-09-14 18:39
+date: 2020-09-14 18:39
 tags:
 	- Database
 	- 数据库原理
