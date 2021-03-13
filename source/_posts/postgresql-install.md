@@ -40,26 +40,62 @@ $ sudo -u postgres psql postgres
 
    create a test database and a test user
    
+   (CREATE USER = CREATE ROLE + LOGIN permission)
+   
    ```plsql
    postgres=# CREATE DATABASE mytestdb;
    CREATE DATABASE
    postgres=# CREATE USER mytestuser WITH ENCRYPTED PASSWORD 'MyStr0ngP@ss';
-   CREATE ROLE
+CREATE ROLE
    postgres=# GRANT ALL PRIVILEGES ON DATABASE mytestdb TO mytestuser;
 GRANT
    ```
 
    now list all databases
-
+   
    ```plsql
-   postgres=# \l
+postgres=# \l
    ```
 
    connect to newly-created database
+   
+   ```plsql
+postgres=# \c mytestdb
+   ```
+   
+
+4. "Peer authentication failed for user XXX"
+
+   edit in file `/etc/postgresql/12/main/pg_hba.conf`, replace `peer` with `md5`
+
+   - `peer` means it will trust the authenticity of UNIX user hence does not prompt for the password.
+   - `md5` means it will always ask for a password, and validate it after hashing with `MD5`
+
+   from
 
    ```plsql
-   postgres=# \c mytestdb
+   # TYPE  DATABASE        USER            ADDRESS                 METHOD
+   
+   # "local" is for Unix domain socket connections only
+   local   all             all                                     peer
+   # IPv4 local connections:
+   host    all             all             127.0.0.1/32            md5
    ```
+
+   to
+
+   ```plsql
+   # TYPE  DATABASE        USER            ADDRESS                 METHOD
+   
+   # "local" is for Unix domain socket connections only
+   local   all             all                                     md5
+   # IPv4 local connections:
+   host    all             all             127.0.0.1/32            md5
+   ```
+
+   then restart postgresql
+
+   `sudo systemctl restart postgresql.service`
 
    
 
