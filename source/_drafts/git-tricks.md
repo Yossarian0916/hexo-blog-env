@@ -4,6 +4,10 @@ tags:
 	- Git
 ---
 
+# Git常用
+
+
+
 ## Mirroring a repository
 
 1. create a bare clone of the repository
@@ -20,6 +24,8 @@ $ git push --mirror https://github.com/exampleuser/new-repository.git
 $ cd ..
 $ rm -rf old-repository.git
 ```
+
+
 
 ## 修改完代码，发现分支错了
 
