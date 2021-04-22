@@ -1,5 +1,5 @@
 ---
-title: java_char_chinese
+title: Java中文字符
 tags:
   - Java
 date: 2021-04-01 23:27:00
