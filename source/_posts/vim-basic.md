@@ -2,7 +2,6 @@
 title: Vim basic
 tags:
   - vim
-data: '2021-01-02 12:23'
 date: 2021-01-12 22:53:40
 ---
 
@@ -18,7 +17,7 @@ vim --version | grep clipboard
 ```
 
 2. Vim寄存器
-  `:help register`查看10类48个寄存器
+    `:help register`查看10类48个寄存器
   - a-z命名寄存器（26个）
   - `"*, "+, "-` 选取拖放
   - `":` 只读，vim命令行
